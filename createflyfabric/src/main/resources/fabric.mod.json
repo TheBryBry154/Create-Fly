@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "createflyfabric",
+  "version": "${version}",
+  "name": "createflyfabric",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/createflyfabric/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "evy.evy.createflyfabric.client.CreateflyfabricClient"
+    ],
+    "main": [
+      "evy.evy.createflyfabric.Createflyfabric"
+    ]
+  },
+  "mixins": [
+    "createflyfabric.mixins.json",
+    {
+      "config": "createflyfabric.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
