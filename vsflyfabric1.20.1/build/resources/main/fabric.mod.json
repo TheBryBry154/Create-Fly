@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "vsflyfabric1_20_1",
+  "version": "1.0",
+  "name": "vsflyfabric1.20.1",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/vsflyfabric1_20_1/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "evy.evy.vsflyfabric1_20_1.client.VsflyFabricClient"
+    ],
+    "main": [
+      "evy.evy.vsflyfabric1_20_1.Vsflyfabric1_20_1"
+    ]
+  },
+  "mixins": [
+    "vsflyfabric1_20_1.mixins.json",
+    {
+      "config": "vsflyfabric1_20_1.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.5",
+    "fabric": "*",
+    "minecraft": "1.20.1"
+  }
+}
